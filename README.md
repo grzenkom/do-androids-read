@@ -11,3 +11,9 @@ conda env update -f environment.yml
 
 conda activate droids-env
 ```
+
+## Jupyter
+
+```bash
+jupyter notebook
+```
