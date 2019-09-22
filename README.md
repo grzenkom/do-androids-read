@@ -28,3 +28,12 @@ jupyter nbconvert hello.ipynb --to slides --post serve
 - Spacebar – Goes forward a slide in the slideshow
 - Shift+Spacebar – Goes back a slide in the slideshow
 - double-click – To edit a Markdown cell
+
+### Stripping the notebook output
+
+A filter configured in `.gitattributes` automatically strips the output from the notebooks
+on commit. You can also manually run:
+
+```bash
+nbstripout nlp_101.ipynb
+``` 
