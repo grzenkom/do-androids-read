@@ -33,13 +33,14 @@ jupyter nbconvert hello.ipynb --to slides --post serve
 
 #### Customizing RISE
 
-To change the theme:
+To change the presentation theme:
 
 1. Go to _Edit / Edit Notebook Metadata_
 2. Append `"rise": {"theme": "sky"}` to the JSON content
 3. (!) Restart the notebook for the changes to take place
 
-More information: https://rise.readthedocs.io/en/maint-5.5/customize.html#choosing-a-theme
+Check the [documentation](https://rise.readthedocs.io/en/maint-5.5/customize.html#choosing-a-theme)
+for other settings that can be customized.
 
 ### Stripping the notebook output
 
