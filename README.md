@@ -24,10 +24,22 @@ jupyter nbconvert hello.ipynb --to slides --post serve
 
 ### RISE slideshow
 
+#### Keyboard shortcuts
+
 - Shift+Enter – Runs the cell on the current slide
 - Spacebar – Goes forward a slide in the slideshow
 - Shift+Spacebar – Goes back a slide in the slideshow
 - double-click – To edit a Markdown cell
+
+#### Customizing RISE
+
+To change the theme:
+
+1. Go to _Edit / Edit Notebook Metadata_
+2. Append `"rise": {"theme": "sky"}` to the JSON content
+3. (!) Restart the notebook for the changes to take place
+
+More information: https://rise.readthedocs.io/en/maint-5.5/customize.html#choosing-a-theme
 
 ### Stripping the notebook output
 
