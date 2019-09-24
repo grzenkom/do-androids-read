@@ -30,10 +30,10 @@ cells can be executed in presentation mode. You can also edit the code.
 
 #### Keyboard shortcuts
 
-- Shift+Enter – Runs the cell on the current slide
-- Spacebar – Goes forward a slide in the slideshow
-- Shift+Spacebar – Goes back a slide in the slideshow
-- double-click – To edit a Markdown cell
+- Shift+Enter - runs the cell on the current slide
+- Spacebar - goes forward a slide in the slideshow
+- Shift+Spacebar - goes back a slide in the slideshow
+- double-click - edits a Markdown cell
 
 #### Customizing RISE
 
@@ -53,4 +53,23 @@ on commit. You can also manually run:
 
 ```bash
 nbstripout nlp_101.ipynb
+``` 
+
+## Arithmetic of word vectors
+
+The function `cosine_similarity` expects 2 arrays of shape `(n_samples_X, n_features)`.
+
+When using it to calculate a similarity of vectors `A` and `B`, you may get error:
+
+> ValueError: Expected 2D array, got 1D array instead:  
+> array=[1. 1. 1.].  
+> Reshape your data either using array.reshape(-1, 1) if your data has a single feature
+> or array.reshape(1, -1) if it contains a single sample.
+
+In that case, either use `reshape` as advised in the error message or convert each vector into
+an artificial 2D array `[A]` and `[B]`:
+
+```python
+from sklearn.metrics.pairwise import cosine_similarity
+cosine_similarity([A], [B])
 ``` 
