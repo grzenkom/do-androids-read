@@ -17,12 +17,16 @@ conda deactivate
 ## Jupyter
 
 ```bash
-jupyter notebook
+jupyter notebook &
 
+# convert to HTML slides or use RISE for a dynamic slideshow
 jupyter nbconvert hello.ipynb --to slides --post serve
 ```
 
 ### RISE slideshow
+
+RISE turns a Jupyter notebook into a live `reveal.js`-based presentation - the code
+cells can be executed in presentation mode. You can also edit the code.
 
 #### Keyboard shortcuts
 
