@@ -1,6 +1,8 @@
 # Notes:
 # 1. Conda searches for packages in the channels listed below, in the order given
 # 2. For some packages the channels may defined explicitly (i.e. channel::package=version)
+# 3. Available spaCy models are described at https://spacy.io/models/en; the "Release details" button is a link to
+#    appropriate release package at GitHub
 
 name: droids-env
 channels:
@@ -15,3 +17,4 @@ dependencies:
   - spacy
   - pip:
       - https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz
+      - https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.0.0/en_core_web_md-2.0.0.tar.gz
