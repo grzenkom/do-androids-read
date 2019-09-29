@@ -11,6 +11,9 @@ conda env update -f environment.yml
 
 conda activate droids-env
 
+# in case of error 'Your shell has not been properly configured ...', try 'source ...'
+source activate droids-env
+
 conda deactivate
 ```
 
