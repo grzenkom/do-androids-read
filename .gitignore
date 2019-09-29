@@ -117,16 +117,5 @@ dmypy.json
 # Visual Studio Code
 .vscode/settings.json
 
-# CDSW environment
-.bash_history
-.bashrc
-.bashrc.bak
-.conda/
-.local/
-.oracle_jre_usage/
-.pip/
-.python_history
-.ssh/
-
 # Mac files
 *.DS_Store
