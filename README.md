@@ -53,7 +53,7 @@ on commit. You can also manually run:
 
 ```bash
 nbstripout nlp_101.ipynb
-``` 
+```
 
 ## Arithmetic of word vectors
 
@@ -72,4 +72,4 @@ an artificial 2D array `[A]` and `[B]`:
 ```python
 from sklearn.metrics.pairwise import cosine_similarity
 cosine_similarity([A], [B])
-``` 
+```
