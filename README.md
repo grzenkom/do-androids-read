@@ -60,3 +60,11 @@ The following websites aggregate latest research papers and datasets, grouped by
 [Deep Learning: A Critical Appraisal](https://arxiv.org/pdf/1801.00631v1.pdf)
 
 Detailed analysis of deep learning strengths and limitations, with proposals how to move forward.
+
+## Previewing HTML pages stored in GitHub
+
+To preview to Jupyter notebook output, you can use the
+[htmlpreview.github.com](https://github.com/htmlpreview/htmlpreview.github.com) project - it renders
+HTML files stored in the repository without cloning it.
+
+[Preview nlp_demo.output.html](http://htmlpreview.github.io/?https://github.com/grzenkom/do-androids-read/blob/master/nlp_demo.output.html)
