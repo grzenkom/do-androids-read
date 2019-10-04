@@ -65,6 +65,6 @@ Detailed analysis of deep learning strengths and limitations, with proposals how
 
 To preview to Jupyter notebook output, you can use the
 [htmlpreview.github.com](https://github.com/htmlpreview/htmlpreview.github.com) project - it renders
-HTML files stored in the repository without cloning it.
+HTML files stored in the repository without the need to clone it.
 
 [Preview nlp_demo.output.html](http://htmlpreview.github.io/?https://github.com/grzenkom/do-androids-read/blob/master/nlp_demo.output.html)
