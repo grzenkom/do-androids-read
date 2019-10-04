@@ -37,7 +37,7 @@ The following websites aggregate latest research papers and datasets, grouped by
 - https://nlpoverview.com/
 - https://paperswithcode.com/area/nlp
 
-### AI scepticism
+### AI skepticism
 
 [Why A.I. is a big fat lie](https://bigthink.com/technology-innovation/why-a-i-is-a-big-fat-lie)
 
