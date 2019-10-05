@@ -36,6 +36,7 @@ The following websites aggregate latest research papers and datasets, grouped by
 - [NLP Progress](http://nlpprogress.com/)
 - [Modern Deep Learning Techniques Applied to NLP](https://nlpoverview.com/)
 - [Papers With Code - NLP](https://paperswithcode.com/area/natural-language-processing)
+- [Yoav Goldberg: The missing elements in NLP (spaCy IRL 2019)](https://youtu.be/e12danHhlic)
 
 ### AI skepticism
 
