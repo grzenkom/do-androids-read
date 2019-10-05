@@ -310,7 +310,7 @@ print(f'max_val = {max(vector_dog)}')
 ## Comparing word vectors
 
 **Cosine similarity**
-![cosine similarity in 2D](images/vectors_cos_sim_600.png)
+![cosine similarity in 2D](./images/vectors_cos_sim_600.png)
 
 **Note:** For illustrative purposes only; the values above are random.
 
@@ -380,7 +380,7 @@ find_similar_vectors(vector_dog, nlp.vocab, num=6)
 
 ## Arithmetic of word vectors
 \begin{equation}
-\large{\mathit{  V_{parent} + V_{woman} = x  }}
+\LARGE{\mathit{    v_{parent} + v_{woman} = x    }}
 \end{equation}
 
 
@@ -397,7 +397,7 @@ find_similar_vectors(x, nlp.vocab, skip_words=[u'parent', u'woman'])
 
 
 \begin{equation}
-\large{\mathit{  V_{seawater} - V_{salt} = x  }}
+\LARGE{\mathit{    v_{seawater} - v_{salt} = x    }}
 \end{equation}
 
 
@@ -415,18 +415,37 @@ find_similar_vectors(x, nlp.vocab, skip_words=[u'seawater', u'salt'])
 
 ## Arithmetic of word vectors
 \begin{equation}
-\large{\mathit{  V_{Germany} - V_{Berlin} = x - V_{Warsaw}  }}
+\LARGE{\mathit{    v_{Switzerland} - v_{Basel} = x - v_{Poznan}    }}
+\end{equation}
+
+\begin{equation}
+\large{\mathit{    x = v_{Poznan} + (v_{Switzerland} - v_{Basel})    }}
 \end{equation}
 
 
 ```python
-x = nlp.vocab[u'germany'].vector - nlp.vocab[u'berlin'].vector + nlp.vocab[u'warsaw'].vector
-find_similar_vectors(x, nlp.vocab, skip_words=[u'germany', u'berlin', u'warsaw'])
+x = nlp.vocab[u'poznan'].vector + nlp.vocab[u'switzerland'].vector - nlp.vocab[u'basel'].vector
+find_similar_vectors(x, nlp.vocab, skip_words=[u'poznan', u'switzerland', u'basel'])
 ```
 
 
 
 
-    ['poland', 'europe', 'sweden']
+    ['poland', 'sweden', 'norway']
 
 
+
+\begin{equation}
+\large{\mathit{    v_{Poland} = 
+                     \underbrace{v_{Poznan}}_\text{a city}
+                   + \underbrace{(v_{Switzerland} - v_{Basel})}_\text{concept of city's country}
+}}
+\end{equation}
+
+## Yay!
+
+![confetti](./images/jason-dent-zUD0bPRl30o-unsplash_1000.jpg)
+Photo by [Jason Dent](https://unsplash.com/@jdent?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+[![Built with spaCy](https://img.shields.io/badge/built%20with-spaCy-09a3d5.svg)](https://spacy.io)
