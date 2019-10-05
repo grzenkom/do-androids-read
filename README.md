@@ -27,7 +27,7 @@ Leaderboard: https://paperswithcode.com/sota/reading-comprehension-narrativeqa (
 - [Reading comprehension definition](https://en.wikipedia.org/wiki/Reading_comprehension)
 - [Similarity metrics (BLEU, METEOR, ROUGE)](https://medium.com/explorations-in-language-and-learning/metrics-for-nlg-evaluation-c89b6a781054)
 
-## Recommended reading materials
+## Recommended materials
 
 ### NLP websites
 
@@ -36,7 +36,12 @@ The following websites aggregate latest research papers and datasets, grouped by
 - [NLP Progress](http://nlpprogress.com/)
 - [Modern Deep Learning Techniques Applied to NLP](https://nlpoverview.com/)
 - [Papers With Code - NLP](https://paperswithcode.com/area/natural-language-processing)
+
+### Videos
+
 - [Yoav Goldberg: The missing elements in NLP (spaCy IRL 2019)](https://youtu.be/e12danHhlic)
+- [Mark Neumann: ScispaCy: A spaCy pipeline & models for scientific & biomedical text (spaCy IRL 2019)](https://youtu.be/2_HSKDALwuw)
+- [Peter Baumgartner: Applied NLP: Lessons from the Field (spaCy IRL 2019)](https://youtu.be/QRGMJWwOU94)
 
 ### AI skepticism
 
