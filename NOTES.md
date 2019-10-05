@@ -49,15 +49,6 @@ To change the presentation theme:
 Check the [documentation](https://rise.readthedocs.io/en/maint-5.5/customize.html#choosing-a-theme)
 for other settings that can be customized.
 
-### Stripping the notebook output
-
-A filter configured in `.gitattributes` automatically strips the output from the notebooks
-on commit. You can also manually run:
-
-```bash
-nbstripout nlp_101.ipynb
-```
-
 ## Arithmetic of word vectors
 
 The function `cosine_similarity` expects 2 arrays of shape `(n_samples_X, n_features)`.
