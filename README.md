@@ -24,8 +24,8 @@ Leaderboard: https://paperswithcode.com/sota/reading-comprehension-narrativeqa (
 
 ## Other sources
 
-- Reading comprehension definition - https://en.wikipedia.org/wiki/Reading_comprehension 
-- Similarity metrics (BLEU, METEOR, ROUGE) - https://medium.com/explorations-in-language-and-learning/metrics-for-nlg-evaluation-c89b6a781054
+- [Reading comprehension definition](https://en.wikipedia.org/wiki/Reading_comprehension)
+- [Similarity metrics (BLEU, METEOR, ROUGE)](https://medium.com/explorations-in-language-and-learning/metrics-for-nlg-evaluation-c89b6a781054)
 
 ## Recommended reading materials
 
@@ -33,9 +33,9 @@ Leaderboard: https://paperswithcode.com/sota/reading-comprehension-narrativeqa (
 
 The following websites aggregate latest research papers and datasets, grouped by NLP tasks:
 
-- http://nlpprogress.com/
-- https://nlpoverview.com/
-- https://paperswithcode.com/area/nlp
+- [NLP Progress](http://nlpprogress.com/)
+- [Modern Deep Learning Techniques Applied to NLP](https://nlpoverview.com/)
+- [Papers With Code - NLP](https://paperswithcode.com/area/natural-language-processing)
 
 ### AI skepticism
 
