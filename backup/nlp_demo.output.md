@@ -260,18 +260,17 @@ displacy.render(doc, style="ent", jupyter=True)
 
 ## Word embeddings
 
-1. Context-free language models
-   - word2vec, GloVe, fastText
-1. Contextual models
-   - ELMo, BERT
-
 
 ```python
 nlp = spacy.load('en_core_web_md')  # larger models, with word vectors
 ```
 
-### Example
+1. Context-free language models
+   - word2vec, GloVe, fastText
+1. Contextual language models
+   - ELMo, BERT
 
+### Example
 > He was sitting by the **river bank**.
 >
 > A **bank account** was opened for them in the morning.
