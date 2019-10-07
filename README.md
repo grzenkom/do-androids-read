@@ -130,6 +130,6 @@ you have two options:
 ## Running the notebook
 
 Check [NOTES.md](NOTES.md) for hints to run the notebook locally or use
-[Binder](https://mybinder.org/) - click the button below to deploy it to the cloud.
+[Binder](https://mybinder.org/) to deploy it to the cloud.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/grzenkom/do-androids-read/master?filepath=nlp_demo.ipynb)
