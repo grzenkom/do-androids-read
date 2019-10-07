@@ -67,6 +67,25 @@ The following websites aggregate latest research papers and datasets, grouped by
 > a fanciful notion that no technological advancements have ever moved us towards in any
 > meaningful way.
 
+[DeepMind's Losses and the Future of Artificial Intelligence](https://www.wired.com/story/deepminds-losses-future-artificial-intelligence/)
+
+> Researchers in machine learning now often ask, “How can machines optimize complex problems
+> using massive amounts of data?” We might also ask, “How do children acquire language and
+> come to understand the world, using less power and data than current AI systems do?” If
+> we spent more time, money, and energy on the latter question than the former, we might
+> get to artificial general intelligence a lot sooner.
+
+[Deep Learning: A Critical Appraisal](https://arxiv.org/pdf/1801.00631v1.pdf)
+
+> What exactly is deep learning, and what has its shown about the nature of intelligence?
+> What can we expect it to do, and where might we expect it to break down? How close or
+> far are we from “artificial general intelligence”, and a point at which machines show a
+> human-like flexibility in solving unfamiliar problems? The purpose of this paper is both
+> to temper some irrational exuberance and also to consider what we as a field might need
+> to move forward.
+
+#### AI in healthcare
+
 [How IBM Watson Overpromised and Underdelivered on AI Health Care](https://spectrum.ieee.org/biomedical/diagnostics/how-ibm-watson-overpromised-and-underdelivered-on-ai-health-care)
 
 > In many attempted applications, Watson’s NLP struggled to make sense of medical text—as
@@ -86,19 +105,14 @@ The following websites aggregate latest research papers and datasets, grouped by
 > Watson’s thinking is based on statistics, so all it can do is gather statistics about
 > main outcomes, explains Kris. "But doctors don’t work that way."
 
-[DeepMind's Losses and the Future of Artificial Intelligence](https://www.wired.com/story/deepminds-losses-future-artificial-intelligence/)
+[AI And Healthcare: Is The Bloom Finally Off The Rose?](https://www.forbes.com/sites/davidshaywitz/2019/08/23/ai-and-healthcare-is-the-bloom-finally-off-the-rose/amp/)
 
-> Researchers in machine learning now often ask, “How can machines optimize complex problems
-> using massive amounts of data?” We might also ask, “How do children acquire language and
-> come to understand the world, using less power and data than current AI systems do?” If
-> we spent more time, money, and energy on the latter question than the former, we might
-> get to artificial general intelligence a lot sooner.
+> Bender goes on to also point out that many of the so-called early successes around
+> "AI in drug discovery" are important but also "a good number of steps away from the more
+> difficult biological and in vivo stages, where efficacy and toxicity in living organisms
+> decides the fate of drugs waiting to be discovered. Hence, there is still a gap that
+> needs to be bridged…"
 
-[Deep Learning: A Critical Appraisal](https://arxiv.org/pdf/1801.00631v1.pdf)
-
-> What exactly is deep learning, and what has its shown about the nature of intelligence?
-> What can we expect it to do, and where might we expect it to break down? How close or
-> far are we from “artificial general intelligence”, and a point at which machines show a
-> human-like flexibility in solving unfamiliar problems? The purpose of this paper is both
-> to temper some irrational exuberance and also to consider what we as a field might need
-> to move forward. 
+> The key issue, he concludes, is the need for "sufficient and sufficiently relevant data
+> in order to predict properties of potential therapies that are relevant for the in vivo
+> situation, which are related to efficacy and toxicity-relevant endpoints."
