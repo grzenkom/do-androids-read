@@ -79,7 +79,7 @@ for token in doc:
 
 
 ```python
-text = u'Bob never took Spanish at school.'
+text = u'Bob never took chemistry in school.'
 doc = nlp(text)
 ```
 
@@ -108,12 +108,12 @@ displacy.render(doc, style="dep", jupyter=True)
 </text>
 
 <text class="displacy-token" fill="currentColor" text-anchor="middle" y="222.0">
-    <tspan class="displacy-word" fill="currentColor" x="575">Spanish</tspan>
-    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="575">ADJ</tspan>
+    <tspan class="displacy-word" fill="currentColor" x="575">chemistry</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="575">NOUN</tspan>
 </text>
 
 <text class="displacy-token" fill="currentColor" text-anchor="middle" y="222.0">
-    <tspan class="displacy-word" fill="currentColor" x="750">at</tspan>
+    <tspan class="displacy-word" fill="currentColor" x="750">in</tspan>
     <tspan class="displacy-tag" dy="2em" fill="currentColor" x="750">ADP</tspan>
 </text>
 
@@ -213,7 +213,8 @@ for rule_id, start_token, end_token in matches:
 
 
 ```python
-text = u'Marek Grzenkowicz came to the Devoxx conference from Poland yesterday around 11 AM.'
+text = u'Marek Grzenkowicz came to University of Economics in Poznan today around 5:40 PM.'
+# text = u'Marek Grzenkowicz came to the Devoxx conference from Poland yesterday around 11 AM.'
 doc = nlp(text)
 ```
 
@@ -230,24 +231,24 @@ displacy.render(doc, style="ent", jupyter=True)
     Marek Grzenkowicz
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">PERSON</span>
 </mark>
- came to the 
+ came to 
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    Devoxx
+    University of Economics
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ORG</span>
 </mark>
- conference from 
+ in 
 <mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    Poland
+    Poznan
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">GPE</span>
 </mark>
 
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    yesterday
+    today
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">DATE</span>
 </mark>
- around 
+
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    11 AM
+    around 5:40 PM
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TIME</span>
 </mark>
 .</div>

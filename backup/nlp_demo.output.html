@@ -13249,7 +13249,7 @@ channel      NOUN
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Bob never took Spanish at school.&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Bob never took chemistry in school.&#39;</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
@@ -13300,12 +13300,12 @@ channel      NOUN
 </text>
 
 <text class="displacy-token" fill="currentColor" text-anchor="middle" y="222.0">
-    <tspan class="displacy-word" fill="currentColor" x="575">Spanish</tspan>
-    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="575">ADJ</tspan>
+    <tspan class="displacy-word" fill="currentColor" x="575">chemistry</tspan>
+    <tspan class="displacy-tag" dy="2em" fill="currentColor" x="575">NOUN</tspan>
 </text>
 
 <text class="displacy-token" fill="currentColor" text-anchor="middle" y="222.0">
-    <tspan class="displacy-word" fill="currentColor" x="750">at</tspan>
+    <tspan class="displacy-word" fill="currentColor" x="750">in</tspan>
     <tspan class="displacy-tag" dy="2em" fill="currentColor" x="750">ADP</tspan>
 </text>
 
@@ -13471,7 +13471,8 @@ never discussed
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Marek Grzenkowicz came to the Devoxx conference from Poland yesterday around 11 AM.&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Marek Grzenkowicz came to University of Economics in Poznan today around 5:40 PM.&#39;</span>
+<span class="c1"># text = u&#39;Marek Grzenkowicz came to the Devoxx conference from Poland yesterday around 11 AM.&#39;</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
@@ -13510,24 +13511,24 @@ never discussed
     Marek Grzenkowicz
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">PERSON</span>
 </mark>
- came to the 
+ came to 
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    Devoxx
+    University of Economics
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ORG</span>
 </mark>
- conference from 
+ in 
 <mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    Poland
+    Poznan
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">GPE</span>
 </mark>
  
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    yesterday
+    today
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">DATE</span>
 </mark>
- around 
+ 
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    11 AM
+    around 5:40 PM
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TIME</span>
 </mark>
 .</div>
