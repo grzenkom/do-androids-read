@@ -127,4 +127,9 @@ you have two options:
 2. use another _nbviewer_ server, e.g.
    [nlp_demo.ipynb @ nbviewer.jupyter.org](https://nbviewer.jupyter.org/github/grzenkom/do-androids-read/blob/master/nlp_demo.ipynb).
 
-If you decide to run the notebook locally, check [NOTES.md](NOTES.md) for hints.
+## Running the notebook
+
+Check [NOTES.md](NOTES.md) for hints to run the notebook locally or use
+[Binder](https://mybinder.org/) - click the button below to deploy it to the cloud.
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/grzenkom/do-androids-read/master?filepath=nlp_demo.ipynb)
