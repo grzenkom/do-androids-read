@@ -112,7 +112,19 @@ The following websites aggregate latest research papers and datasets, grouped by
 > difficult biological and in vivo stages, where efficacy and toxicity in living organisms
 > decides the fate of drugs waiting to be discovered. Hence, there is still a gap that
 > needs to be bridged…"
-
+>
 > The key issue, he concludes, is the need for "sufficient and sufficiently relevant data
 > in order to predict properties of potential therapies that are relevant for the in vivo
 > situation, which are related to efficacy and toxicity-relevant endpoints."
+
+## Viewing the notebook online
+
+Generally, GitHub is able to render Jupyter notebooks, so just click the file `nlp_demo.ipynb`
+first. If it fails (probably with a generic error like `Sorry, something went wrong. Reload?`),
+you have two options:
+
+1. view the notebook saved as HTML or Markdown files in the `exported` directory,
+2. use another _nbviewer_ server, e.g.
+   [nlp_demo.ipynb @ nbviewer.jupyter.org](https://nbviewer.jupyter.org/github/grzenkom/do-androids-read/blob/master/nlp_demo.ipynb)
+
+If you decide to run the notebook locally, check [NOTES.md](NOTES.md) for hints.
