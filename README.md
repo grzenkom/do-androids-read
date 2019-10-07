@@ -123,8 +123,8 @@ Generally, GitHub is able to render Jupyter notebooks, so just click the file `n
 first. If it fails (probably with a generic error like `Sorry, something went wrong. Reload?`),
 you have two options:
 
-1. view the notebook saved as HTML or Markdown files in the `exported` directory,
+1. view the notebook saved in different formats in directory [/exported](/exported),
 2. use another _nbviewer_ server, e.g.
-   [nlp_demo.ipynb @ nbviewer.jupyter.org](https://nbviewer.jupyter.org/github/grzenkom/do-androids-read/blob/master/nlp_demo.ipynb)
+   [nlp_demo.ipynb @ nbviewer.jupyter.org](https://nbviewer.jupyter.org/github/grzenkom/do-androids-read/blob/master/nlp_demo.ipynb).
 
 If you decide to run the notebook locally, check [NOTES.md](NOTES.md) for hints.
