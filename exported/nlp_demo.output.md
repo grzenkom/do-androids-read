@@ -442,10 +442,4 @@ find_similar_vectors(x, nlp.vocab, skip_words=[u'poznan', u'switzerland', u'base
 }}
 \end{equation}
 
-## Yay!
-
-![confetti](./images/jason-dent-zUD0bPRl30o-unsplash_1000.jpg)
-Photo by [Jason Dent](https://unsplash.com/@jdent?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-
 [![Built with spaCy](https://img.shields.io/badge/built%20with-spaCy-09a3d5.svg)](https://spacy.io)
