@@ -133,3 +133,6 @@ Check [NOTES.md](NOTES.md) for hints to run the notebook locally or use
 [Binder](https://mybinder.org/) to deploy it to the cloud.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/grzenkom/do-androids-read/master?filepath=nlp_demo.ipynb)
+
+It may take Binder 10-15 minutes to download all the dependencies and build the Docker image
+for the project (but it's amazing to watch it happen in a browser window).
