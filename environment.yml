@@ -11,7 +11,6 @@ channels:
 dependencies:
   - python=3.7.4
   - jupyter
-  - conda-forge::jupyter_contrib_nbextensions
   - pip
   - conda-forge::rise
   - scikit-learn
