@@ -1,4 +1,14 @@
+/* workout by inspecting the slide source code in Developer Tools */
 .rise-enabled .reveal pre {
     font-size: 140%;
     line-height: initial;
+}
+
+/* https://github.com/hakimel/reveal.js/issues/1554 */
+.reveal .slides {
+    /* border: 5px solid greenyellow; */
+    min-height: 95%;
+    min-width: 95%;
+    width: 128mm;
+    height: 96mm;
 }
