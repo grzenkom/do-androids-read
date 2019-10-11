@@ -33,10 +33,7 @@ cells can be executed in presentation mode. You can also edit the code.
 
 #### Keyboard shortcuts
 
-- Shift+Enter - runs the cell on the current slide
-- Spacebar - goes forward a slide in the slideshow
-- Shift+Spacebar - goes back a slide in the slideshow
-- double-click - edits a Markdown cell
+![reveal.js help](./images/reveal-help.png)
 
 #### Customizing RISE
 
