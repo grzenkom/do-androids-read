@@ -6,11 +6,11 @@
 
 /* increase slide size https://github.com/hakimel/reveal.js/issues/1554 */
 .reveal .slides {
-    /* border: 5px solid greenyellow; */
     min-height: 95%;
     min-width: 95%;
-    width: 128mm;
     height: 96mm;
+    width: 128mm;
+    /* border: 5px solid greenyellow; */
 }
 
 /* hide the buttons */
