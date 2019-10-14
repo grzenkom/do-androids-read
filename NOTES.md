@@ -46,24 +46,6 @@ To change the presentation theme:
 Check the [documentation](https://rise.readthedocs.io/en/maint-5.5/customize.html#choosing-a-theme)
 for other settings that can be customized.
 
-### Font size for code blocks
-
-1. The package [jupyter_contrib_nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html#install-javascript-and-css-files)
-   is installed as part of the project Conda environment.
-
-2. Run `jupyter contrib nbextension install --user` to enable it.
-
-3. Enable the extensions you want to use:
-
-   ```bash
-   jupyter nbextension enable code_font_size/code_font_size
-   jupyter nbextension enable execute_time/ExecuteTime
-   ```
-
-   To specify the extension, you need to pass `extension_dir/extension_js_file`.
-   To see what they are check the extensions directory - on my laptop, the files are located in
-   `~/.pyenv/versions/miniconda3-latest/envs/droids-env/lib/python3.7/site-packages/jupyter_contrib_nbextensions/nbextensions`.
-
 ## Arithmetic of word vectors
 
 The function `cosine_similarity` expects 2 arrays of shape `(n_samples_X, n_features)`.
