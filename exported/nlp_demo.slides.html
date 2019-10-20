@@ -13199,12 +13199,28 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">spacy</span>
+
+<span class="c1"># medium model, includes word vectors</span>
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;en_core_web_md&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Basic-NLP-operations">Basic NLP operations<a class="anchor-link" href="#Basic-NLP-operations">&#182;</a></h1><ol>
-<li>Lemmatization</li>
+<h2 id="Basic-NLP-operations">Basic NLP operations<a class="anchor-link" href="#Basic-NLP-operations">&#182;</a></h2><ol>
 <li>Part-of-speech (POS) tagging</li>
+<li>Lemmatization</li>
 <li>Dependency parsing</li>
 <li>Rule-based pattern matching</li>
 <li>Named entity recognition (NER)</li>
@@ -13217,35 +13233,16 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lemmatization">Lemmatization<a class="anchor-link" href="#Lemmatization">&#182;</a></h2>
+<h2 id="Part-of-speech-(POS)-tagging">Part-of-speech (POS) tagging<a class="anchor-link" href="#Part-of-speech-(POS)-tagging">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">spacy</span>
-
-<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;en_core_web_sm&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;&#39;She goes for a walk every day.</span>
-<span class="s1">           He was going to the cinema in the evening.</span>
-<span class="s1">           They have already gone to work.</span>
-<span class="s1">           I took my coffee to go and went home.&#39;&#39;&#39;</span>
-<span class="n">word_to_find</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;go&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;The sky above the port was the color of television, tuned to a dead channel&#39;</span>
 </pre></div>
 
     </div>
@@ -13256,65 +13253,6 @@ a.anchor-link {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span> <span class="o">==</span> <span class="n">word_to_find</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{token.text:&lt;8}</span><span class="s1"> </span><span class="si">{token.lemma_}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>goes     go
-going    go
-gone     go
-go       go
-went     go
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Part-of-speech-(POS)-tagging">Part-of-speech (POS) tagging<a class="anchor-link" href="#Part-of-speech-(POS)-tagging">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;The sky above the port was the color of television, tuned to a dead channel.&#39;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
@@ -13353,7 +13291,71 @@ to           ADP
 a            DET
 dead         ADJ
 channel      NOUN
-.            PUNCT
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lemmatization">Lemmatization<a class="anchor-link" href="#Lemmatization">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;&#39;She goes for a walk every day.</span>
+<span class="s1">           He was going to the cinema in the evening.</span>
+<span class="s1">           They have already gone to work.</span>
+<span class="s1">           I took my coffee to go and went home.&#39;&#39;&#39;</span>
+<span class="n">word_to_find</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;go&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ORIGINAL | LEMMA&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">lemma_</span> <span class="o">==</span> <span class="n">word_to_find</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{token.text:&lt;8}</span><span class="s1"> | </span><span class="si">{token.lemma_}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ORIGINAL | LEMMA
+goes     | go
+going    | go
+gone     | go
+go       | go
+went     | go
 </pre>
 </div>
 </div>
@@ -13374,7 +13376,7 @@ channel      NOUN
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Bob never took chemistry in school.&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Bob never took chemistry in school&#39;</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
@@ -13435,7 +13437,7 @@ channel      NOUN
 </text>
 
 <text class="displacy-token" fill="currentColor" text-anchor="middle" y="222.0">
-    <tspan class="displacy-word" fill="currentColor" x="925">school.</tspan>
+    <tspan class="displacy-word" fill="currentColor" x="925">school</tspan>
     <tspan class="displacy-tag" dy="2em" fill="currentColor" x="925">NOUN</tspan>
 </text>
 
@@ -13499,9 +13501,9 @@ channel      NOUN
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;&#39;Corrective actions to the previous audit findings are not implemented in a timely manner.</span>
-<span class="s1">           Most are not fully documented.</span>
-<span class="s1">           There are even some findings that the team never discussed.&#39;&#39;&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;&#39;Corrective actions to the previous audit findings are not implemented</span>
+<span class="s1">           in a timely manner. Most are not fully documented. There are even</span>
+<span class="s1">           some findings that the team never discussed.&#39;&#39;&#39;</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
@@ -13577,8 +13579,7 @@ never discussed
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Marek Grzenkowicz came to University of Economics in Poznan today around 5:40 PM.&#39;</span>
-<span class="c1"># text = u&#39;Marek Grzenkowicz came to the Devoxx conference from Poland yesterday around 11 AM.&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;Marek Grzenkowicz came to Devoxx from Poland yesterday at 1:30 PM&#39;</span>
 <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
@@ -13619,25 +13620,25 @@ never discussed
 </mark>
  came to 
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    University of Economics
+    Devoxx
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ORG</span>
 </mark>
- in 
+ from 
 <mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    Poznan
+    Poland
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">GPE</span>
 </mark>
  
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    today
+    yesterday
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">DATE</span>
 </mark>
- 
+ at 
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    around 5:40 PM
+    1:30 PM
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TIME</span>
 </mark>
-.</div>
+</div>
 </div>
 
 </div>
@@ -13646,6 +13647,26 @@ never discussed
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Word-embeddings">Word embeddings<a class="anchor-link" href="#Word-embeddings">&#182;</a></h2><ol>
+<li>Context-free language models<ul>
+<li>word2vec</li>
+<li><strong>GloVe</strong> &nbsp;&nbsp;&nbsp;&nbsp; ← used by default spaCy models</li>
+<li>fastText</li>
+</ul>
+</li>
+<li>Contextual language models<ul>
+<li>ELMo</li>
+<li>BERT</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13656,53 +13677,6 @@ never discussed
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;en_core_web_md&#39;</span><span class="p">)</span>  <span class="c1"># larger models, with word vectors</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Context-free language models<ul>
-<li>word2vec, GloVe, fastText</li>
-</ul>
-</li>
-<li>Contextual language models<ul>
-<li>ELMo, BERT</li>
-</ul>
-</li>
-</ol>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h3><blockquote><p>He was sitting by the <strong>river bank</strong>.</p>
-<p>A <strong>bank account</strong> was opened for them in the morning.</p>
-</blockquote>
-
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Word-embeddings">Word embeddings<a class="anchor-link" href="#Word-embeddings">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector_dog</span> <span class="o">=</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;dog&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span>
@@ -13739,7 +13713,7 @@ never discussed
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;length  = {len(vector_dog)}&#39;</span><span class="p">)</span>
@@ -13791,7 +13765,7 @@ max_val = 2.169300079345703
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="k">import</span> <span class="n">cosine_similarity</span>
@@ -13801,7 +13775,8 @@ max_val = 2.169300079345703
 <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
     <span class="n">vector_word</span> <span class="o">=</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="n">word</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span>
     
-    <span class="n">cos_sim</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">([</span><span class="n">vector_dog</span><span class="p">],</span> <span class="p">[</span><span class="n">vector_word</span><span class="p">])</span>  <span class="c1"># calculate cosine between two vectors</span>
+    <span class="c1"># calculate cosine between two vectors</span>
+    <span class="n">cos_sim</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">([</span><span class="n">vector_dog</span><span class="p">],</span> <span class="p">[</span><span class="n">vector_word</span><span class="p">])</span>
     
     <span class="n">cos_sim</span> <span class="o">=</span> <span class="n">cos_sim</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;cos(dog, {word + &quot;)&quot;:&lt;8} = </span><span class="si">{cos_sim:&gt;6.3f}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -13845,14 +13820,15 @@ cos(dog, bitcoin) = -0.085
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="k">import</span> <span class="n">cosine_similarity</span>
 
 <span class="k">def</span> <span class="nf">find_similar_vectors</span><span class="p">(</span><span class="n">word_vector</span><span class="p">,</span> <span class="n">vocabulary</span><span class="p">,</span> <span class="n">skip_words</span><span class="o">=</span><span class="p">(),</span> <span class="n">num</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Finds vectors close to `word_vector` in terms of cosine similarity, inside given `vocabulary`.</span>
+<span class="sd">    Finds vectors close to `word_vector` in terms of cosine similarity,</span>
+<span class="sd">    inside given `vocabulary`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">result</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">w</span>
@@ -13874,13 +13850,54 @@ cos(dog, bitcoin) = -0.085
 </div>
 </div>
 
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Arithmetic-of-word-vectors">Arithmetic of word vectors<a class="anchor-link" href="#Arithmetic-of-word-vectors">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">find_similar_vectors</span><span class="p">(</span><span class="n">vector_dog</span><span class="p">,</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;canines&#39;, &#39;dogs&#39;, &#39;puppy&#39;, &#39;poodle&#39;, &#39;terrier&#39;, &#39;husky&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">find_similar_vectors</span><span class="p">(</span><span class="n">vector_dog</span><span class="p">,</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vector_spring</span> <span class="o">=</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;spring&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span>
+<span class="n">find_similar_vectors</span><span class="p">(</span><span class="n">vector_spring</span><span class="p">,</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13899,7 +13916,7 @@ cos(dog, bitcoin) = -0.085
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&#39;canines&#39;, &#39;dogs&#39;, &#39;puppy&#39;, &#39;poodle&#39;, &#39;terrier&#39;, &#39;husky&#39;]</pre>
+<pre>[&#39;summertime&#39;, &#39;summer&#39;, &#39;autumn&#39;, &#39;winter&#39;, &#39;fall&#39;, &#39;sprung&#39;]</pre>
 </div>
 
 </div>
@@ -13907,6 +13924,15 @@ cos(dog, bitcoin) = -0.085
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/springs.jpg" alt="spring ambiguity">
+(!) Context-free language models <strong>cannot disambiguate</strong> different meanings of the same word.</p>
+
+</div>
+</div>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14017,7 +14043,8 @@ cos(dog, bitcoin) = -0.085
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;poznan&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span> <span class="o">+</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;switzerland&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span> <span class="o">-</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;basel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_concept</span> <span class="o">=</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;switzerland&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span> <span class="o">-</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;basel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;poznan&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">vector</span> <span class="o">+</span> <span class="n">new_concept</span>
 <span class="n">find_similar_vectors</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">,</span> <span class="n">skip_words</span><span class="o">=</span><span class="p">[</span><span class="sa">u</span><span class="s1">&#39;poznan&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;switzerland&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;basel&#39;</span><span class="p">])</span>
 </pre></div>
 

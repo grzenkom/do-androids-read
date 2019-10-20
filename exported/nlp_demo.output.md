@@ -1,52 +1,27 @@
-# Basic NLP operations
+```python
+import spacy
 
-1. Lemmatization
+# medium model, includes word vectors
+nlp = spacy.load('en_core_web_md')
+```
+
+## Basic NLP operations
+
 1. Part-of-speech (POS) tagging
+1. Lemmatization
 1. Dependency parsing
 1. Rule-based pattern matching
 1. Named entity recognition (NER)
 1. Word embeddings
 
-## Lemmatization
-
-
-```python
-import spacy
-
-nlp = spacy.load('en_core_web_sm')
-```
-
-
-```python
-text = u'''She goes for a walk every day.
-           He was going to the cinema in the evening.
-           They have already gone to work.
-           I took my coffee to go and went home.'''
-word_to_find = u'go'
-```
-
-
-```python
-doc = nlp(text)
-
-for token in doc:
-    if token.lemma_ == word_to_find:
-        print(f'{token.text:<8} {token.lemma_}')
-```
-
-    goes     go
-    going    go
-    gone     go
-    go       go
-    went     go
-
-
 ## Part-of-speech (POS) tagging
 
 
 ```python
-text = u'The sky above the port was the color of television, tuned to a dead channel.'
+text = u'The sky above the port was the color of television, tuned to a dead channel'
 ```
+
+William Gibson – Neuromancer
 
 
 ```python
@@ -72,14 +47,42 @@ for token in doc:
     a            DET
     dead         ADJ
     channel      NOUN
-    .            PUNCT
+
+
+## Lemmatization
+
+
+```python
+text = u'''She goes for a walk every day.
+           He was going to the cinema in the evening.
+           They have already gone to work.
+           I took my coffee to go and went home.'''
+word_to_find = u'go'
+```
+
+
+```python
+doc = nlp(text)
+
+print('ORIGINAL | LEMMA')
+for token in doc:
+    if token.lemma_ == word_to_find:
+        print(f'{token.text:<8} | {token.lemma_}')
+```
+
+    ORIGINAL | LEMMA
+    goes     | go
+    going    | go
+    gone     | go
+    go       | go
+    went     | go
 
 
 ## Dependency parsing
 
 
 ```python
-text = u'Bob never took chemistry in school.'
+text = u'Bob never took chemistry in school'
 doc = nlp(text)
 ```
 
@@ -118,7 +121,7 @@ displacy.render(doc, style="dep", jupyter=True)
 </text>
 
 <text class="displacy-token" fill="currentColor" text-anchor="middle" y="222.0">
-    <tspan class="displacy-word" fill="currentColor" x="925">school.</tspan>
+    <tspan class="displacy-word" fill="currentColor" x="925">school</tspan>
     <tspan class="displacy-tag" dy="2em" fill="currentColor" x="925">NOUN</tspan>
 </text>
 
@@ -168,9 +171,9 @@ displacy.render(doc, style="dep", jupyter=True)
 
 
 ```python
-text = u'''Corrective actions to the previous audit findings are not implemented in a timely manner.
-           Most are not fully documented.
-           There are even some findings that the team never discussed.'''
+text = u'''Corrective actions to the previous audit findings are not implemented
+           in a timely manner. Most are not fully documented. There are even
+           some findings that the team never discussed.'''
 doc = nlp(text)
 ```
 
@@ -213,8 +216,7 @@ for rule_id, start_token, end_token in matches:
 
 
 ```python
-text = u'Marek Grzenkowicz came to University of Economics in Poznan today around 5:40 PM.'
-# text = u'Marek Grzenkowicz came to the Devoxx conference from Poland yesterday around 11 AM.'
+text = u'Marek Grzenkowicz came to Devoxx from Poland yesterday at 1:30 PM'
 doc = nlp(text)
 ```
 
@@ -233,25 +235,25 @@ displacy.render(doc, style="ent", jupyter=True)
 </mark>
  came to 
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    University of Economics
+    Devoxx
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ORG</span>
 </mark>
- in 
+ from 
 <mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    Poznan
+    Poland
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">GPE</span>
 </mark>
 
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    today
+    yesterday
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">DATE</span>
 </mark>
-
+ at 
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em; box-decoration-break: clone; -webkit-box-decoration-break: clone">
-    around 5:40 PM
+    1:30 PM
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TIME</span>
 </mark>
-.</div>
+</div>
 
 
 
@@ -261,20 +263,13 @@ displacy.render(doc, style="ent", jupyter=True)
 
 ## Word embeddings
 
-
-```python
-nlp = spacy.load('en_core_web_md')  # larger models, with word vectors
-```
-
 1. Context-free language models
-   - word2vec, GloVe, fastText
+   - word2vec
+   - **GloVe** &nbsp;&nbsp;&nbsp;&nbsp; ← used by default spaCy models
+   - fastText
 1. Contextual language models
-   - ELMo, BERT
-
-### Example
-> He was sitting by the **river bank**.
->
-> A **bank account** was opened for them in the morning.
+   - ELMo
+   - BERT
 
 1. Context-free language models - vectors trained on a text corpus from co-occurrence statistics
 1. Contextual models - word representations that are a function of the entire context of sentence or paragraph
@@ -325,7 +320,8 @@ words = ['dog', 'husky', 'cat', 'horse', 'tree', 'stone', 'bitcoin']
 for word in words:
     vector_word = nlp.vocab[word].vector
     
-    cos_sim = cosine_similarity([vector_dog], [vector_word])  # calculate cosine between two vectors
+    # calculate cosine between two vectors
+    cos_sim = cosine_similarity([vector_dog], [vector_word])
     
     cos_sim = cos_sim[0][0]
     print(f'cos(dog, {word + ")":<8} = {cos_sim:>6.3f}')
@@ -348,7 +344,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def find_similar_vectors(word_vector, vocabulary, skip_words=(), num=3):
     """
-    Finds vectors close to `word_vector` in terms of cosine similarity, inside given `vocabulary`.
+    Finds vectors close to `word_vector` in terms of cosine similarity,
+    inside given `vocabulary`.
     """
     result = [
         w
@@ -366,6 +363,8 @@ def find_similar_vectors(word_vector, vocabulary, skip_words=(), num=3):
     return [w.orth_ for w in result[:num]]
 ```
 
+## Arithmetic of word vectors
+
 
 ```python
 find_similar_vectors(vector_dog, nlp.vocab, num=6)
@@ -377,6 +376,26 @@ find_similar_vectors(vector_dog, nlp.vocab, num=6)
     ['canines', 'dogs', 'puppy', 'poodle', 'terrier', 'husky']
 
 
+
+
+```python
+vector_spring = nlp.vocab[u'spring'].vector
+find_similar_vectors(vector_spring, nlp.vocab, num=6)
+```
+
+
+
+
+    ['summertime', 'summer', 'autumn', 'winter', 'fall', 'sprung']
+
+
+
+![spring ambiguity](./images/springs.jpg)
+(!) Context-free language models **cannot disambiguate** different meanings of the same word.
+
+Photo by Anisur Rahman on Unsplash (season)
+
+Photo by Alexander Schimmeck on Unsplash (metal coil)
 
 ## Arithmetic of word vectors
 \begin{equation}
@@ -424,7 +443,8 @@ find_similar_vectors(x, nlp.vocab, skip_words=[u'seawater', u'salt'])
 
 
 ```python
-x = nlp.vocab[u'poznan'].vector + nlp.vocab[u'switzerland'].vector - nlp.vocab[u'basel'].vector
+new_concept = nlp.vocab[u'switzerland'].vector - nlp.vocab[u'basel'].vector
+x = nlp.vocab[u'poznan'].vector + new_concept
 find_similar_vectors(x, nlp.vocab, skip_words=[u'poznan', u'switzerland', u'basel'])
 ```
 
