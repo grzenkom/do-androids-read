@@ -22,6 +22,12 @@ Paper: https://arxiv.org/pdf/1712.07040.pdf (2017)
 Website: https://github.com/deepmind/narrativeqa/  
 Leaderboard: https://paperswithcode.com/sota/reading-comprehension-narrativeqa (unofficial)
 
+### General Language Understanding Evaluation (GLUE)
+
+Paper: https://arxiv.org/pdf/1804.07461.pdf (2019)  
+Website: https://gluebenchmark.com/  
+Leaderboard: https://gluebenchmark.com/leaderboard/
+
 ## Other sources
 
 - [Reading comprehension definition](https://en.wikipedia.org/wiki/Reading_comprehension)
@@ -44,6 +50,15 @@ The following websites aggregate latest research papers and datasets, grouped by
 - [Peter Baumgartner: Applied NLP: Lessons from the Field (spaCy IRL 2019)](https://youtu.be/QRGMJWwOU94)
 
 ### AI skepticism
+
+[Machines Beat Humans on a Reading Test. But Do They Understand?](https://www.quantamagazine.org/machines-beat-humans-on-a-reading-test-but-do-they-understand-20191017/)
+
+> But is AI actually starting to understand our language — or is it just getting better
+> at gaming our systems? As BERT-based neural networks have taken benchmarks like GLUE
+> by storm, new evaluation methods have emerged that seem to paint these powerful NLP
+> systems as computational versions of Clever Hans, the early 20th-century horse who
+> seemed smart enough to do arithmetic, but who was actually just following unconscious
+> cues from his trainer.
 
 [Why A.I. is a big fat lie](https://bigthink.com/technology-innovation/why-a-i-is-a-big-fat-lie)
 
