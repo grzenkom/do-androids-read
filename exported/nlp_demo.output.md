@@ -458,7 +458,7 @@ find_similar_vectors(x, nlp.vocab, skip_words=[u'poznan', u'switzerland', u'base
 \begin{equation}
 \large{\mathit{    v_{Poland} = 
                      \underbrace{v_{Poznan}}_\text{a city}
-                   + \underbrace{(v_{Switzerland} - v_{Basel})}_\text{concept of city's country}
+                   + \underbrace{(v_{Switzerland} - v_{Basel})}_\text{concept of a country}
 }}
 \end{equation}
 
