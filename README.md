@@ -1,6 +1,6 @@
 # Do androids read about electric sheep? Machine reading comprehension algorithms
 
-[![Code4Life logo](https://code4life.pl/assets/images/code4life-logo.png)](https://it.roche.pl/)
+[![Code4Life logo](images/code4life-logo.png)](https://it.roche.pl/)
 
 ## Research papers
 
