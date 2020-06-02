@@ -1,6 +1,8 @@
 # Do androids read about electric sheep? Machine reading comprehension algorithms
 
-[![Code4Life logo](images/code4life-logo.png)](https://it.roche.pl/)
+## Presentation video
+
+[Recording from Devoxx Ukraine 2019](https://www.youtube.com/watch?v=Pz27XsF3_jc)
 
 ## Research papers
 
